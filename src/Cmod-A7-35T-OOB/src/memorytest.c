@@ -36,7 +36,7 @@
 #include "xstatus.h"
 #include "xil_testmem.h"
 #include "xgpio.h"
-#include "microblaze_sleep.h"
+//#include "microblaze_sleep.h"
 
 #include "platform.h"
 #include "memory_config.h"
@@ -84,7 +84,7 @@ static XTmrCtr sTmr;
 // interrupt vector table
 const ivt_t ivt[] = {
 	// User I/O
-	{XPAR_AXI_INTC_0_AXI_TIMER_0_INTERRUPT_INTR, (XInterruptHandler)XTmrCtr_InterruptHandler, &sTmr}
+	{XPAR_FABRIC_AXI_TIMER_0_INTR, (XInterruptHandler)XTmrCtr_InterruptHandler, &sTmr}
 };
 
 
@@ -140,12 +140,12 @@ int main()
 
 
     //once past memory testing enter GPIO loop
-    Status = XGpio_Initialize(&Gpio1, XPAR_AXI_GPIO_0_DEVICE_ID);
+    Status = XGpio_Initialize(&Gpio1, XPAR_AXI_GPIO_0_BASEADDR);
     	if (Status != XST_SUCCESS) {
     		return XST_FAILURE;
     	}
 
-    	Status = XGpio_Initialize(&Gpio2, XPAR_AXI_GPIO_1_DEVICE_ID);
+    	Status = XGpio_Initialize(&Gpio2, XPAR_AXI_GPIO_1_BASEADDR);
     	    	if (Status != XST_SUCCESS) {
     	    		return XST_FAILURE;
     	    	}

@@ -124,7 +124,7 @@ XStatus fnInitUserIO(XGpio *Gpio2, XTmrCtr *psTmr)
 	/*
 	 * Initialize timer for RGB LED PWMing
 	 */
-	RETURN_ON_FAILURE(XTmrCtr_Initialize(psTmr, XPAR_AXI_TIMER_0_DEVICE_ID));
+	RETURN_ON_FAILURE(XTmrCtr_Initialize(psTmr, XPAR_AXI_TIMER_0_BASEADDR));
 	RETURN_ON_FAILURE(XTmrCtr_SelfTest(psTmr, TMR_NUM_PERIOD));
 	RETURN_ON_FAILURE(XTmrCtr_SelfTest(psTmr, TMR_NUM_PULSE));
 

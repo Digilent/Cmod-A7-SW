@@ -58,7 +58,7 @@
 XStatus fnInitInterruptController(XIntc *psIntc)
 {
 	// Init driver instance
-	RETURN_ON_FAILURE(XIntc_Initialize(psIntc, INTC_DEVICE_ID));
+	RETURN_ON_FAILURE(XIntc_Initialize(psIntc, XPAR_AXI_INTC_0_BASEADDR));
 
 	// Start interrupt controller
 	RETURN_ON_FAILURE(XIntc_Start(psIntc, XIN_REAL_MODE));
