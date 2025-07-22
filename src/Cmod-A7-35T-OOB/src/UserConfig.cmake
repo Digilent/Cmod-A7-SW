@@ -27,6 +27,13 @@ set(USER_UNDEFINED_SYMBOLS
 
 set(USER_INCLUDE_DIRECTORIES
 )
+set(USER_COMPILE_SOURCES
+"memorytest.c"
+"memory_config_g.c"
+"platform.c"
+"intc.c"
+"userio.c"
+)
 
 # -----------------------------------------
 

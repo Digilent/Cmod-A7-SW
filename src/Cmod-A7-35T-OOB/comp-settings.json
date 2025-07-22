@@ -5,6 +5,9 @@
 		"\"__clang__\""
 	],
 	"USER_INCLUDE_DIRECTORIES" : [],
+	"USER_COMPILE_SOURCES" : [
+		"\"memorytest.c\""
+	],
 	"USER_COMPILE_WARNINGS_ALL" : [
 		"-Wall"
 	],
@@ -37,5 +40,5 @@
 		"\"${CMAKE_SOURCE_DIR}/lscript.ld\""
 	],
 	"USER_LINK_OTHER_FLAGS" : [],
-	"Cmod-A7-35T-OOB" : "src\\user_35t_wrapper\\user_35t_wrapper.xsa"
+	"Cmod-A7-35T-OOB" : "src\\user_35t_wrappe\\user_35t_wrappe.xsa"
 }
