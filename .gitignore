@@ -3,3 +3,9 @@ ws/*
 # except the cleanup scripts
 !ws/cleanup.cmd
 !ws/cleanup.sh
+
+# ignore Packages/ and wsdata/ created by Vitis
+
+/Packages
+/.wsdata
+dfx_runtime.txt
