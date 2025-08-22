@@ -40,5 +40,5 @@
 		"\"${CMAKE_SOURCE_DIR}/lscript.ld\""
 	],
 	"USER_LINK_OTHER_FLAGS" : [],
-	"Cmod-A7-35T-OOB" : "src\\user_35t_wrappe\\user_35t_wrappe.xsa"
+	"Cmod-A7-35T-OOB" : "src\\user_35t_wrapper\\user_35t_wrapper.xsa"
 }
